@@ -1,0 +1,62 @@
+.sidebar {
+    transition: width 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.sidebar.minimized {
+    width: 80px;
+}
+.sidebar.expanded {
+    width: 250px;
+}
+.nav-text {
+    transition: opacity 0.3s ease;
+}
+.sidebar.minimized .nav-text {
+    opacity: 0;
+    display: none; /* Hide text completely when minimized */
+}
+.sidebar.expanded .nav-text {
+    opacity: 1;
+    display: inline; /* Show text when expanded */
+}
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.sidebar-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #374151;
+    transition: opacity 0.3s ease;
+}
+.sidebar.minimized .sidebar-title {
+    opacity: 0;
+    display: none;
+}
+.sidebar.expanded .sidebar-title {
+    opacity: 1;
+}
+.toggle-icon {
+    transition: transform 0.3s ease;
+}
+.sidebar.minimized .toggle-icon {
+    transform: rotate(180deg); /* Rotate arrow for minimized state */
+}
+.main-content {
+    transition: margin-left 0.3s ease;
+}
+.filter-btn {
+    transition: all 0.2s ease;
+}
+.filter-btn:hover {
+    background-color: #e5e7eb;
+}
+.active {
+    background-color: #bde0fe; /* Blue background (Tailwind's blue-500) */
+    color: #ffffff; /* White text for contrast */
+}
+.active svg, .active img {
+    filter: brightness(0) invert(1); /* Make icons/images white */
+}
